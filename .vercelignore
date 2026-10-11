@@ -1,0 +1,7 @@
+artifacts/
+wordpress files/
+PDF/
+Orca-Project/
+tmp-*.html
+debug.log
+*.docx

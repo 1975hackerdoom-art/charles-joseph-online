@@ -1,0 +1,12 @@
+.section { background: var(--paper); border-top: 1px solid var(--line); }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: #ffffff; }
+.preview { display: block; padding: 24px; background: #ffffff; }
+.preview img { display: block; width: 100%; height: 320px; object-fit: contain; }
+.preview:focus-visible { outline-offset: -4px; }
+.body { padding: 24px; }
+.body h3 { margin-bottom: 18px; font-size: 1.3rem; line-height: 1.3; }
+.body a { gap: 16px; font-size: 1rem; }
+.action { margin-top: 32px; text-align: center; }
+.action a { max-width: 100%; }
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } .preview img { height: 300px; } }

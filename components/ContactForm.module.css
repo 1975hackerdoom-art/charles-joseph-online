@@ -1,0 +1,41 @@
+.panel { min-width: 0; padding: clamp(26px, 3vw, 46px); border: 1px solid var(--line); border-radius: 8px; background: #ffffff; box-shadow: 0 18px 60px #12284c09; animation: enter 750ms cubic-bezier(.22,1,.36,1) both; }
+.panel h2 { font-size: clamp(1.8rem, 2.6vw, 2.5rem); }
+.panel :global(.eyebrow) { margin-bottom: 14px; }
+.intro { margin-top: 15px; margin-bottom: 26px; }
+.requiredNote { margin-bottom: 16px; }
+.fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; padding: 0; margin: 0; border: 0; min-width: 0; }
+.honeypot { display: none; }
+.field { position: relative; min-width: 0; }
+.full { grid-column: 1 / -1; }
+.field input, .field textarea { width: 100%; min-height: 68px; border: 1px solid #6f7271; border-radius: 4px; background: #ffffff; color: var(--text); padding: 29px 15px 10px; font: inherit; font-size: var(--font-size-body); transition: border-color 220ms ease, box-shadow 220ms ease, background 220ms ease; }
+.field textarea { display: block; resize: vertical; min-height: 170px; }
+.field label { position: absolute; top: 19px; left: 15px; color: var(--muted); font-size: var(--font-size-body); line-height: 1.4; transform-origin: left top; transition: transform 200ms ease, color 200ms ease; pointer-events: none; }
+.field input:focus, .field textarea:focus { border-color: var(--gold-ink); background: #ffffff; box-shadow: 0 0 0 3px #bc955c20; outline: 2px solid var(--gold-ink); outline-offset: 2px; }
+.field input:focus + label, .field input:not(:placeholder-shown) + label, .field textarea:focus + label, .field textarea:not(:placeholder-shown) + label { transform: translateY(-11px) scale(.875); color: var(--gold-ink); }
+.note { margin-block: 20px; }
+.submit { min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 30px; border: 0; border-radius: 3px; padding: 14px 24px; background: var(--navy); color: #ffffff; font-size: var(--font-size-body); font-weight: 700; transition: background 250ms ease, transform 250ms ease; }
+.submit svg { transition: transform 250ms ease; }
+.submit:hover { background: var(--blue); transform: translateY(-2px); }
+.submit:hover svg { transform: translate(3px,-3px); }
+.submit:disabled { cursor: wait; opacity: .65; transform: none; }
+.feedback { margin-top: 24px; padding: 20px; background: #ffffff; border-left: 3px solid var(--gold); border-radius: 3px; animation: enter 350ms ease both; font-size: var(--font-size-body); }
+.feedback strong { display: block; margin-bottom: 5px; }
+.feedback a { display: inline-flex; align-items: center; min-height: 44px; color: var(--gold-ink); text-decoration: underline; }
+.error { border-color: #bc955c; }
+@keyframes enter { from { opacity: 0; translate: 0 22px; } to { opacity: 1; translate: 0 0; } }
+@media (max-width: 560px) { .fields { grid-template-columns: 1fr; } .submit { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .panel, .feedback { animation: none; } .field input, .field textarea, .field label, .submit, .submit svg { transition: none; } .submit:hover, .submit:hover svg { transform: none; } }
+
+.panel { border-radius: 2px; border-top: 3px solid var(--gold); }
+.panel h2 { font-family: var(--font-display); font-weight: 600; }
+.submit { background: linear-gradient(115deg,#12284c,#12284c); border-bottom: 2px solid var(--gold); }
+
+.note a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 4px; }
+.panel { border-radius: 16px; border-top: 1px solid var(--line); box-shadow: 0 12px 35px #12284c07; }
+.field { position: relative; }
+.field label { position: absolute; top: 15px; left: 15px; pointer-events: none; color: var(--muted); font-size: var(--font-size-body); line-height: 1.4; transform-origin: left top; transition: transform 200ms ease, color 200ms ease; }
+.field input, .field textarea { padding: 27px 15px 10px; min-height: 62px; border-color: #6f7271; border-radius: 8px; background: #ffffff; }
+.field textarea { min-height: 170px; }
+.field input:focus + label, .field input:not(:placeholder-shown) + label, .field textarea:focus + label, .field textarea:not(:placeholder-shown) + label { transform: translateY(-10px) scale(.84); color: var(--gold-ink); }
+.submit { min-height: 54px; margin-top: 22px; border-radius: 8px; background: var(--gold); color: var(--navy); }
+.submit:hover { background: var(--paper); color: var(--navy); }

@@ -1,0 +1,29 @@
+{
+  "name": "charles-joseph-online",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "export:static": "node scripts/export-static.mjs",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "check": "node scripts/check-pages.mjs",
+    "check:a11y": "node scripts/check-accessibility.mjs"
+  },
+  "dependencies": {
+    "next": "^16.3.5",
+    "nodemailer": "^10.0.10",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.0.0",
+    "@types/nodemailer": "^8.0.2",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.8.0"
+  }
+}

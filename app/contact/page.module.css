@@ -1,0 +1,40 @@
+.contactGrid { display: grid; grid-template-columns: .85fr 1.3fr; gap: clamp(28px, 4vw, 60px); align-items: start; }
+.options { display: grid; gap: 24px; }
+.booking { position: relative; isolation: isolate; overflow: hidden; padding: clamp(28px, 3vw, 44px); background: var(--navy); color: #ffffff; border-radius: 8px; }
+.booking h2 { font-size: clamp(2rem, 3vw, 3rem); margin-bottom: 20px; }
+.booking > p { color: #ffffff; position: relative; }
+.booking .bookingEyebrow { color: var(--pale-gold); font-size: var(--font-size-body) !important; font-weight: 700; letter-spacing: .13em; margin-bottom: 18px; }
+.booking :global(.button) { margin-top: 30px; position: relative; }
+.bookingNote { display: block; font-size: var(--font-size-body); color: #ffffff; margin-top: 14px; }
+.calendarIcon { width: 60px; height: 60px; border: 1px solid #bc955c70; border-radius: 50%; display: grid; place-items: center; margin-bottom: 28px; color: var(--pale-gold); }
+.bookingArt { position: absolute; width: 250px; height: 250px; top: -100px; right: -115px; z-index: -1; animation: drift 9s ease-in-out infinite alternate; }
+.bookingArt span { position: absolute; inset: 0; border: 1px solid #bc955c40; border-radius: 50%; }
+.bookingArt span:nth-child(2) { inset: 25px; }
+.bookingArt span:nth-child(3) { inset: 50px; }
+.emailCard { padding: 26px; border: 1px solid var(--line); border-radius: 8px; }
+.person { display: flex; align-items: center; gap: 17px; margin-bottom: 22px; }
+.person img { width: 68px; height: 68px; border-radius: 50%; object-fit: cover; object-position: 52% 40%; }
+.person strong, .person span { display: block; }
+.person span { color: var(--muted); font-size: var(--font-size-body); }
+.emailCard > a { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; color: var(--gold-ink); font-size: var(--font-size-body); font-weight: 700; overflow-wrap: anywhere; }
+.testimonials { background: #ffffff; border-top: 1px solid var(--line); }
+.testimonials h2 { margin-bottom: 38px; }
+.quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.quoteCard { padding: clamp(24px, 3vw, 40px); background: #ffffff; border: 1px solid var(--line); border-radius: 6px; transition: transform 300ms ease, box-shadow 300ms ease; }
+.quoteCard:first-child { grid-row: span 2; display: flex; flex-direction: column; }
+.quoteMark { display: block; font-family: var(--font-body); font-size: 4rem; line-height: .8; color: var(--gold-ink); margin-bottom: 8px; }
+.quoteCard blockquote { margin: 0 0 25px; font-size: var(--font-size-body); line-height: 1.85; }
+.quoteCard figcaption { display: flex; flex-direction: row; flex-wrap: nowrap; gap: 14px; align-items: center; margin-top: auto; }
+.quoteCard figcaption > div { min-width: 0; }
+.initials { width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; background: #ffffff; color: var(--gold-ink); display: grid; place-items: center; font-size: var(--font-size-body); font-weight: 800; }
+.quoteCard figcaption strong, .quoteCard figcaption div > span { display: block; }
+.quoteCard figcaption strong { font-size: var(--font-size-body); }
+.quoteCard figcaption div > span { color: var(--muted); font-size: var(--font-size-body); margin-top: 4px; }
+@keyframes drift { from { transform: translateY(0) scale(1); } to { transform: translateY(20px) scale(1.08); } }
+@media (hover: hover) and (pointer: fine) { .quoteCard:hover { transform: translateY(-4px); box-shadow: 0 12px 28px #12284c0d; } }
+@media (max-width: 850px) { .contactGrid, .quotes { grid-template-columns: 1fr; } .quoteCard:first-child { grid-row: auto; } }
+@media (prefers-reduced-motion: reduce) { .bookingArt { animation: none; } .quoteCard { transition: none; } .quoteCard:hover { transform: none; } }
+
+.booking, .emailCard, .quoteCard { border-radius: 16px; border: 1px solid var(--line); }
+.booking { background: linear-gradient(135deg,#12284c,#12284c); }
+.testimonials { background: #ffffff70; }

@@ -1,0 +1,74 @@
+.toolbar { display: flex; align-items: end; gap: 24px; padding-bottom: 36px; border-bottom: 1px solid var(--line); }
+.toolbar label { display: block; font-size: var(--font-size-body); font-weight: 700; margin-bottom: 9px; }
+.search { flex: 1; }
+.searchInput { display: flex; align-items: center; gap: 13px; border: 1px solid #6f7271; padding: 0 16px; border-radius: 4px; background: #ffffff; }
+.searchInput input { width: 100%; min-width: 0; min-height: 50px; border: 0; background: transparent; color: var(--text); font: inherit; font-size: var(--font-size-body); }
+.searchInput svg { flex-shrink: 0; color: var(--gold-ink); }
+.filter { width: 260px; }
+.filter select { width: 100%; min-height: 52px; padding: 10px 36px 10px 16px; border: 1px solid #6f7271; border-radius: 4px; font: inherit; font-size: var(--font-size-body); background: #ffffff; color: var(--text); }
+.resultsHeader { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 40px 0 28px; }
+.resultsHeader h2 { font-size: 1.65rem; scroll-margin-top: 130px; }
+.resultsHeader p { font-variant-numeric: tabular-nums; }
+.featured { display: grid; grid-template-columns: .9fr 1.1fr; margin-bottom: 36px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--navy); color: #ffffff; }
+.featuredImage, .cardImage { display: flex; align-items: center; justify-content: center; overflow: hidden; background: linear-gradient(135deg, #ffffff, #ffffff); }
+.featuredImage { min-height: 400px; padding: 35px; }
+.featuredImage img { max-height: 380px; width: 100%; object-fit: contain; transition: transform 650ms cubic-bezier(.22,1,.36,1); }
+.featuredBody { padding: clamp(25px, 3vw, 48px); }
+.featuredBody h3 { font-size: clamp(1.8rem, 2.6vw, 2.6rem); margin: 16px 0 20px; line-height: 1.18; font-weight: 600; }
+.featuredBody .kicker { color: var(--pale-gold); }
+.featuredBody .kicker span { margin-inline: 8px; }
+.featuredBody time, .featuredBody .excerpt { color: #ffffff; }
+.featuredBody .readLink { color: var(--pale-gold); margin-top: 25px; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.card { min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: #ffffff; transition: transform 350ms ease, box-shadow 350ms ease, border-color 350ms ease; }
+.cardImage { height: 220px; padding: 20px; border-bottom: 1px solid var(--line); }
+.cardImage img { height: 100%; width: 100%; object-fit: contain; transition: transform 650ms cubic-bezier(.22,1,.36,1); }
+.cardBody { padding: 25px; flex: 1; display: flex; flex-direction: column; align-items: start; }
+.kicker { color: var(--gold-ink); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 9px; }
+.card time, .featured time { font-size: var(--font-size-body); color: var(--muted); }
+.featured time { color: #ffffff; }
+.card h3 { font-size: 1.43rem; line-height: 1.25; margin: 15px 0; }
+.card h3 a:hover, .featured h3 a:hover { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 5px; }
+.excerpt { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.card .excerpt { margin-bottom: 25px; }
+.readLink { min-height: 44px; display: inline-flex; align-items: center; gap: 28px; font-size: var(--font-size-body); font-weight: 800; margin-top: auto; border-bottom: 1px solid var(--gold); }
+.readLink span { font-size: 1.2rem; transition: transform 250ms ease; }
+.readLink:hover span { transform: translate(3px, -3px); }
+.pagination { display: flex; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid var(--line); margin-top: 48px; padding-top: 28px; }
+.pagination button { min-width: 44px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); background: #ffffff; color: var(--text); border-radius: 3px; font-size: var(--font-size-body); }
+.pagination button[aria-current='page'] { background: var(--navy); border-color: var(--navy); color: #ffffff; }
+.pagination button:hover:not(:disabled) { border-color: var(--gold-ink); }
+.pagination button:disabled { opacity: .4; cursor: default; }
+.pageNumbers { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.ellipsis { padding: 0 4px; }
+.empty { text-align: center; padding: 70px 20px; background: #ffffff; border: 1px solid var(--line); }
+.empty p { margin: 15px 0 24px; }
+.card[data-revealed='true'], .featured[data-revealed='true'] { animation: reveal 650ms cubic-bezier(.22,1,.36,1) both; }
+@keyframes reveal { from { opacity: 0; translate: 0 22px; } to { opacity: 1; translate: 0 0; } }
+@media (hover: hover) and (pointer: fine) {
+  .card:hover { transform: translateY(-5px); border-color: var(--gold); box-shadow: 0 15px 32px #12284c12; }
+  .cardImage:hover img, .featuredImage:hover img { transform: scale(1.035); }
+}
+@media (max-width: 1050px) { .grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 760px) {
+  .featured { grid-template-columns: 1fr; }
+  .featuredImage { min-height: 260px; max-height: 320px; }
+  .featuredImage img { max-height: 250px; }
+  .toolbar { flex-direction: column; align-items: stretch; gap: 18px; }
+  .filter { width: 100%; }
+  .resultsHeader { flex-direction: column; gap: 10px; }
+  .pagination { flex-wrap: wrap; justify-content: center; }
+  .pageNumbers { order: -1; flex-basis: 100%; }
+}
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .card[data-revealed='true'], .featured[data-revealed='true'] { animation: none; }
+  .card, .cardImage img, .featuredImage img, .readLink span { transition: none; }
+  .card:hover, .cardImage:hover img, .featuredImage:hover img, .readLink:hover span { transform: none; }
+}
+
+.card, .featured { border-radius: 16px; border: 1px solid var(--line); }
+.featuredImage, .cardImage { background: linear-gradient(135deg,#ffffff,#ffffff 65%,#bc955c30); }
+.featuredBody h3, .card h3 { font-family: var(--font-display); font-weight: 600; }
+.logoThumbnail { background: var(--navy); }
+.logoThumbnail img { width: 145px; height: 145px; max-width: 100%; object-fit: contain; }

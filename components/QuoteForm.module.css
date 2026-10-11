@@ -1,0 +1,28 @@
+.wrapper { width: min(100%, 360px); min-width: 0; }
+.heading { margin: 0 0 20px; font-family: var(--font-display); font-size: 1.65rem; font-weight: 600; color: var(--pale-gold); }
+.form fieldset { padding: 0; margin: 0; min-width: 0; border: 0; }
+.field { position: relative; }
+.field + .field { margin-top: 16px; }
+.field label { position: absolute; top: 14px; left: 14px; color: #ffffff; font-size: .95rem; line-height: 1.4; pointer-events: none; transform-origin: left top; transition: transform .2s, color .2s; }
+.field input, .field textarea { display: block; width: 100%; min-height: 54px; padding: 25px 14px 8px; border: 1px solid #6f7271; border-radius: 8px; background: #ffffff09; color: #ffffff; font: inherit; font-size: 1rem; line-height: 1.5; transition: border-color .2s, box-shadow .2s, background .2s; }
+.field textarea { resize: vertical; min-height: 122px; }
+.field input::placeholder, .field textarea::placeholder { color: transparent; opacity: 1; }
+.field input:focus, .field textarea:focus { outline: 2px solid var(--pale-gold); outline-offset: 3px; background: #ffffff10; border-color: var(--pale-gold); box-shadow: 0 0 18px #bc955c16; }
+.field input:focus + label, .field input:not(:placeholder-shown) + label, .field textarea:focus + label, .field textarea:not(:placeholder-shown) + label { transform: translateY(-9px) scale(.82); color: var(--pale-gold); }
+.submit { display: flex; justify-content: space-between; align-items: center; width: 100%; min-height: 52px; margin-top: 20px; padding: 13px 18px; border: 0; border-radius: 8px; background: #bc955c; color: #12284c; font: inherit; font-weight: 700; cursor: pointer; transition: background .2s, color .2s, transform .2s, box-shadow .2s; }
+.submit:hover { background: #ffffff; color: #12284c; }
+.submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px #12284c33; }
+.submit span { transition: transform .2s; }
+.submit:hover span { transform: translate(2px,-2px); }
+.submit:focus-visible { outline: 2px solid #ffffff; outline-offset: 4px; }
+.form fieldset:disabled { opacity: .7; }
+.form fieldset:disabled .submit { cursor: wait; transform: none; }
+.feedback { margin-top: 16px; color: #ffffff; font-size: .9rem; line-height: 1.6; overflow-wrap: anywhere; }
+.feedback a { display: inline-block; padding-block: 10px; color: var(--pale-gold); text-decoration: underline; text-underline-offset: 4px; }
+.trap { display: none; }
+@media (max-width: 700px) { .wrapper { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .field input, .field textarea, .submit, .submit span { transition: none; } .submit:hover, .submit:hover span { transform: none; } }
+
+/* Keep the footer quote action in the current gold treatment after shared theme overrides. */
+.submit { background: var(--gold); color: var(--navy); border-bottom: 2px solid var(--navy); }
+.submit:hover, .submit:focus-visible { background: var(--paper); color: var(--navy); }

@@ -1,0 +1,83 @@
+[
+  {
+    "name": "City of Castlegar",
+    "title": "From AI concepts to practical first steps",
+    "description": "A tailored workshop gave municipal staff a foundation for exploring AI and applying tools such as Microsoft Copilot to their work.",
+    "file": "CTB-Castlegar-Case-Study.pdf",
+    "preview": "CTB-Castlegar-Case-Study.png",
+    "pages": 1,
+    "size": 75
+  },
+  {
+    "name": "Town of Comox",
+    "title": "New conversations. Practical possibilities.",
+    "description": "A digital transformation workshop helped the Comox team explore how different tools and processes could support staff and better serve residents.",
+    "file": "CTB-Comox-Case-Study.pdf",
+    "preview": "CTB-Comox-Case-Study.png",
+    "pages": 1,
+    "size": 75
+  },
+  {
+    "name": "Gitlaxt’aamiks Village Government",
+    "title": "Stronger governance. Knowledge that stays.",
+    "description": "An ongoing partnership is turning manual Council administration into shared workflows, with full knowledge transfer to the internal team underway.",
+    "file": "CTB-Gitlaxtaamiks-Case-Study.pdf",
+    "preview": "CTB-Gitlaxtaamiks-Case-Study.png",
+    "pages": 2,
+    "size": 78
+  },
+  {
+    "name": "Town of High Level",
+    "title": "A stronger handover. Lasting improvements.",
+    "description": "CTB supported legislative services through organizational change, delivering digital systems and documented processes for the team taking over.",
+    "file": "CTB-High-Level-Case-Study.pdf",
+    "preview": "CTB-High-Level-Case-Study.png",
+    "pages": 2,
+    "size": 77
+  },
+  {
+    "name": "District of Kitimat",
+    "title": "From understanding AI to putting it to work.",
+    "description": "Practical staff training laid the foundation. The partnership now continues with work to automate the District’s bank reconciliation processes.",
+    "file": "CTB-Kitimat-Case-Study.pdf",
+    "preview": "CTB-Kitimat-Case-Study.png",
+    "pages": 1,
+    "size": 75
+  },
+  {
+    "name": "District of Logan Lake",
+    "title": "Practical tools for everyday municipal work",
+    "description": "From policy and privacy to bylaw tracking and operations, CTB created tools and guidance to support the District’s day-to-day work.",
+    "file": "CTB-Logan-Lake-Case-Study.pdf",
+    "preview": "CTB-Logan-Lake-Case-Study.png",
+    "pages": 2,
+    "size": 78
+  },
+  {
+    "name": "District of Port Edward",
+    "title": "A new team. A stronger foundation.",
+    "description": "After 100% administrative staff turnover, including senior leadership, Port Edward needed practical support to rebuild capacity and continuity.",
+    "file": "CTB-Port-Edward-Case-Study.pdf",
+    "preview": "CTB-Port-Edward-Case-Study.png",
+    "pages": 1,
+    "size": 75
+  },
+  {
+    "name": "District of Tumbler Ridge",
+    "title": "Practical AI. Clear governance.",
+    "description": "From January to April 2026, CTB developed practical systems, governance tools and staff resources to support the District’s daily work.",
+    "file": "CTB-Tumbler-Ridge-Case-Study.pdf",
+    "preview": "CTB-Tumbler-Ridge-Case-Study.png",
+    "pages": 1,
+    "size": 75
+  },
+  {
+    "name": "City of Yellowknife",
+    "title": "From operational gaps to focused AI projects.",
+    "description": "CTB helped Yellowknife connect its technology strategy with everyday operational needs. The partnership now continues through three focused projects.",
+    "file": "CTB-Yellowknife-Case-Study.pdf",
+    "preview": "CTB-Yellowknife-Case-Study.png",
+    "pages": 2,
+    "size": 77
+  }
+]

@@ -1,0 +1,25 @@
+.button { position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center; gap: 22px; width: fit-content; max-width: 100%; margin: 0 0 44px; padding: 16px 26px 16px 16px; border: 1px solid var(--pale-gold); border-radius: 10px; background: var(--gold); color: var(--navy); box-shadow: 0 12px 30px #12284c33; transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
+.button::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(110deg, transparent 30%, #ffffff45 50%, transparent 70%); transform: translateX(-140%); animation: sheen 7s ease-in-out infinite; pointer-events: none; }
+.art { position: relative; display: grid; place-items: center; width: 94px; height: 94px; flex-shrink: 0; background: var(--navy); border-radius: 50%; }
+.envelope { color: var(--pale-gold); animation: float 4s ease-in-out infinite; }
+.letter { animation: letter 4s ease-in-out infinite; }
+.spark { position: absolute; right: 5px; top: 0; font-size: 25px; color: var(--pale-gold); animation: sparkle 4s ease-in-out infinite; }
+.label { font-size: var(--font-size-body); line-height: 1.45; }
+.label strong { display: block; font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.2; font-weight: 800; letter-spacing: -.03em; }
+.arrow { flex-shrink: 0; margin-left: 12px; transition: transform .25s ease; }
+.button:hover, .button:focus-visible { color: var(--navy); background: var(--pale-gold); transform: translateY(-3px); box-shadow: 0 16px 34px #12284c44; }
+.button:hover .arrow, .button:focus-visible .arrow { transform: translate(3px, -3px); }
+.channels { position: relative; z-index: 1; display: flex; gap: 18px; margin-top: 16px; margin-bottom: 24px; }
+.channels a { display: inline-flex; align-items: center; gap: 8px; color: var(--pale-gold); font-size: .9rem; text-decoration: none; transition: color .2s ease, transform .2s ease; }
+.channels a:hover, .channels a:focus-visible { color: #ffffff; transform: translateY(-2px); }
+.channels svg { color: currentColor; }
+@keyframes float { 0%, 100% { transform: translateY(2px) rotate(-3deg); } 50% { transform: translateY(-4px) rotate(3deg); } }
+@keyframes letter { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@keyframes sparkle { 0%, 100% { opacity: .5; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.15); } }
+@keyframes sheen { 0%, 65% { transform: translateX(-140%); } 100% { transform: translateX(140%); } }
+@media (max-width: 700px) { .button { width: 100%; padding: 16px; gap: 14px; } .art { width: 64px; height: 64px; } .envelope { width: 56px; height: 56px; } .arrow { margin-left: auto; width: 20px; } .label { font-size: 1rem; } .label strong { font-size: 1.5rem; } }
+@media (prefers-reduced-motion: reduce) { .button::before, .envelope, .letter, .spark { animation: none; } .button, .arrow, .channels a { transition: none; } .button:hover, .button:focus-visible, .button:hover .arrow, .button:focus-visible .arrow, .channels a:hover, .channels a:focus-visible { transform: none; } }
+
+.button { border-radius: 2px; background: linear-gradient(115deg,#bc955c,#bc955c 60%,#bc955c); }
+.art { border-radius: 2px; border: 1px solid #bc955c80; }
+.label strong { font-family: var(--font-display); font-weight: 400; }

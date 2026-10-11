@@ -1,0 +1,11 @@
+.section { background: var(--paper); border-top: 1px solid var(--line); }
+.list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; list-style: none; padding: 0; margin: 0; }
+.list li { min-width: 0; border-bottom: 1px solid var(--line); }
+.list a { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 76px; height: 100%; padding: 18px 4px; font-weight: 700; }
+.list a:hover { color: var(--gold-ink); }
+.list a:hover span:first-child { text-decoration: underline; text-underline-offset: 4px; }
+.list a span:last-child { color: var(--gold-ink); }
+.action { margin-top: 32px; }
+.action a { max-width: 100%; }
+@media (max-width: 960px) { .list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .list { grid-template-columns: 1fr; } }
