@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import './charles.css';
+import './article.css';
 
 export const metadata: Metadata = {
   title: 'Charles Joseph | Faith, Leadership and Enterprise',
