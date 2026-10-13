@@ -8,6 +8,7 @@ export type InsightArticle = {
   paragraphs: string[];
   question: string;
   guideLink?: boolean;
+  videoEmbedUrl?: string;
 };
 
 export const insightArticles: InsightArticle[] = [
